@@ -1,0 +1,55 @@
+<html>
+	<head>
+	  <title>Carrots</title>
+	  <style>
+	   img{
+             width: 200px;
+	     position:absolute;
+             left:100px;  
+	     top: 100px;
+	  }	
+	  </style>
+	</head>
+
+	<body>
+	<img id= "unicorn" src="http://pre11.deviantart.net/9abf/th/pre/i/2013/110/f/6/fluffle_puff_by_mixermike622-d4l5y4r.png"/>
+
+	<script>
+	  var unicorn; 
+	     unicorn= document.getElementById("unicorn");
+		console.log(unicorn);
+	var unicornLeft = 100;
+	var unicornTop = 100;
+
+
+		document.body.addEventListener('keydown',function(e){
+			switch(e.keyCode){
+			case 38:
+			 //up
+			 unicornTop = unicornTop - 10;	
+			  unicorn.style.top = unicornTop + "px";
+			break;
+			case 40:
+			//down
+			unicornTop = unicornTop + 10;
+			unicorn.style.top = unicornTop + "px";	
+			break;
+			case 37:
+			//left
+                          unicornLeft = unicornLeft - 10;	
+			  unicorn.style.left = unicornLeft + "px";
+
+			break;
+			case 39:
+			//right
+                         unicornLeft = unicornLeft + 10;	
+			  unicorn.style.left = unicornLeft + "px";
+
+
+			break;
+			}
+		});
+	</script>
+	</body>
+
+</html>
